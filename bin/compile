@@ -1,7 +1,32 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
 
 BUILD_DIR=$1
-CACHE_DIR=$2
 
-echo "----> DONE"
+VENDOR_DIR=$BUILD_DIR/vendor
+
+POPPLER_DATA_HOME=$VENDOR_DIR/poppler-data
+POPPLER_DATA_DIR=$VENDOR_DIR/poppler-data-0.4.9
+
+POPPLER_HOME=$VENDOR_DIR/poppler
+POPPLER_DIR=$VENDOR_DIR/poppler-0.72.0
+
+echo "       Extracting poppler data"
+tar -xf poppler-data-0.4.9.tar.gz -C $VENDOR_DIR
+echo "       Extracted"
+
+#echo "       Installing poppler data"
+#cd $POPPLER_DATA_DIR
+# make
+# make install
+
+echo "       Extracting poppler"
+tar -xf poppler-0.72.0.tar.xz -C $VENDOR_DIR
+echo "       Extracted"
+
+echo "       Installing poppler"
+#cd $POPPLER_DIR
+#make
+
+#export PATH=$PATH:$POPPLER_HOME/bin
+
+echo "-----> DONE"
