@@ -1,1 +1,4 @@
 https://webcache.googleusercontent.com/search?q=cache:4eymxxcYwV4J:https://qiita.com/gamerinshaft/items/e13b786eaa7e75a04532+&cd=1&hl=ja&ct=clnk&gl=jp
+
+キーワード
+heroku export bash path buildpack
