@@ -4,8 +4,31 @@ BUILD_DIR=$1
 
 VENDOR_DIR=$BUILD_DIR/vendor
 
+POPPLER_DATA_HOME=$VENDOR_DIR/poppler-data
+POPPLER_DATA_DIR=$VENDOR_DIR/poppler-data-0.4.9
+
+POPPLER_HOME=$VENDOR_DIR/poppler
+POPPLER_DIR=$VENDOR_DIR/poppler-0.83.0/
+
+cd $POPPLER_DIR
+make
+make install
+
 echo "-----> START"
 
-apt install poppler-utils poppler-data
+tar -xvzf poppler-0.49.0.tar.xz -C $VENDOR_DIR
+
+echo "Installing poppler data"
+cd $POPPLER_DATA_DIR
+make
+make install
+
+cd ..
+
+echo "Installing poppler"
+tar -xf poppler-0.83.0.tar.gz -C $VENDOR_DIR
+./configure
+make
+make install
 
 echo "-----> DONE"
