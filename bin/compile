@@ -11,7 +11,8 @@ POPPLER_HOME=$VENDOR_DIR/poppler
 POPPLER_DIR=$VENDOR_DIR/poppler-0.72.0
 
 echo "       Extracting poppler data"
-tar xzf poppler-data-0.4.9.tar.gz -C $VENDOR_DIR
+tar -xf poppler-data-0.4.9.tar.gz
+cd $VENDOR_DIR
 echo "       Extracted"
 
 echo "       Installing poppler data"
@@ -20,7 +21,8 @@ make
 make install
 
 echo "       Extracting poppler"
-tar xzf poppler-0.72.0.tar.xz -C $VENDOR_DIR
+tar -xf poppler-0.72.0.tar.xz
+cd $VENDOR_DIR
 echo "       Extracted"
 
 echo "       Installing poppler"
