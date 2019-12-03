@@ -10,6 +10,14 @@ POPPLER_DATA_DIR=$VENDOR_DIR/poppler-data-0.4.9
 POPPLER_HOME=$VENDOR_DIR/poppler
 POPPLER_DIR=$VENDOR_DIR/poppler-0.83.0/
 
+echo "-----> DIR START"
+dir
+echo "-----> DIR END"
+
+echo "-----> ls START"
+ls -l
+echo "-----> ls END"
+
 echo "-----> START"
 
 cd $VENDOR_DIR
