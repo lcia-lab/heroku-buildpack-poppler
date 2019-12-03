@@ -10,17 +10,9 @@ POPPLER_DATA_DIR=$VENDOR_DIR/poppler-data-0.4.9
 POPPLER_HOME=$VENDOR_DIR/poppler
 POPPLER_DIR=$VENDOR_DIR/poppler-0.83.0/
 
-
-dir
-ls
-
-cd $POPPLER_DIR
-make
-make install
-
 echo "-----> START"
 
-tar -xvzf poppler-0.49.0.tar.xz -C $VENDOR_DIR
+tar -xvzf ./poppler-data-0.4.9.tar.gz -C $VENDOR_DIR
 
 echo "Installing poppler data"
 cd $POPPLER_DATA_DIR
@@ -30,7 +22,7 @@ make install
 cd ..
 
 echo "Installing poppler"
-tar -xf poppler-0.83.0.tar.gz -C $VENDOR_DIR
+tar -xf ./poppler-0.83.0.tar.xz -C $VENDOR_DIR
 ./configure
 make
 make install
