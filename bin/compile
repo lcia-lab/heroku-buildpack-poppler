@@ -2,7 +2,9 @@
 
 BUILD_DIR=$1
 
-VENDOR_DIR=/app/tmp/buildpacks/$BUILD_DIR/vendor
+PWD = $(pwd)
+
+VENDOR_DIR=$PWD/vendor
 
 POPPLER_DATA_HOME=$VENDOR_DIR/poppler-data
 POPPLER_DATA_DIR=$VENDOR_DIR/poppler-data-0.4.9
