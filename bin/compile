@@ -26,11 +26,9 @@ echo "Installing poppler"
 
 tar Jxfv "$VENDOR_DIR/poppler-0.83.0.tar.xz"
 cd $POPPLER_DIR \
-&& cmake .. -DCMAKE_INSTALL_PREFIX="$POPPLER_DIR" -DCMAKE_BUILD_TYPE=release \
+&& cmake . -DCMAKE_INSTALL_PREFIX="$VENDOR_DIR" -DCMAKE_BUILD_TYPE=release \
 && make \
 && make install
-
-ls
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/poppler.sh"
 mkdir -p $(dirname $PROFILE_PATH)
