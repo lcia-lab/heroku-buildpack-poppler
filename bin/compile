@@ -30,6 +30,8 @@ cd $POPPLER_DIR \
 && make \
 && make install
 
+ls
+
 PROFILE_PATH="$BUILD_DIR/.profile.d/poppler.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:$HOME/vendor/poppler/bin"' >> $PROFILE_PATH
