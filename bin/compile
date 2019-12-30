@@ -19,7 +19,7 @@ echo "Installing poppler data"
 
 tar -xvzf "$VENDOR_DIR/poppler-data-0.4.9.tar.gz"
 cd $POPPLER_DATA_DIR
-make prefix="$HOME/vendor" install
+make prefix="$VENDOR_DIR" install
 
 cd $VENDOR_DIR
 echo "Installing poppler"
@@ -28,7 +28,7 @@ tar Jxfv "$VENDOR_DIR/poppler-0.83.0.tar.xz"
 cd $POPPLER_DIR
 
 cmake  -DCMAKE_BUILD_TYPE=Release   \
-       -DCMAKE_INSTALL_PREFIX="$HOME/vendor"  \
+       -DCMAKE_INSTALL_PREFIX="$VENDOR_DIR"  \
        -DENABLE_UNSTABLE_API_ABI_HEADERS=ON     \
        .. && make
 
