@@ -24,7 +24,7 @@ make install
 cd $VENDOR_DIR
 echo "Installing poppler"
 
-tar -xf "$VENDOR_DIR/poppler-0.83.0.tar.xz"
+tar Jxfv "$VENDOR_DIR/poppler-0.83.0.tar.xz"
 cd $POPPLER_DIR
 ./configure
 make
