@@ -27,11 +27,8 @@ echo "Installing poppler"
 tar Jxfv "$VENDOR_DIR/poppler-0.83.0.tar.xz"
 cd $POPPLER_DIR
 
-cmake  -DCMAKE_BUILD_TYPE=Release   \
-       -DCMAKE_INSTALL_PREFIX="$VENDOR_DIR"  \
-       -DENABLE_UNSTABLE_API_ABI_HEADERS=ON     \
-       .. && make
-
+cmake .. -DCMAKE_INSTALL_PREFIX="$VENDOR_DIR" -DCMAKE_BUILD_TYPE=release
+make
 make install
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/poppler.sh"
