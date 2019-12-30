@@ -6,6 +6,8 @@ BUILD_DIR=$1
 BIN_DIR=$(cd "$(dirname "$0")"; pwd) # absolute path
 VENDOR_DIR="$BIN_DIR/../vendor"
 
+echo $VENDOR_DIR
+
 POPPLER_DATA_HOME="$VENDOR_DIR/poppler-data"
 POPPLER_DATA_DIR="$VENDOR_DIR/poppler-data-0.4.9"
 
