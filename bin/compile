@@ -14,7 +14,7 @@ POPPLER_DIR="$VENDOR_DIR/poppler-0.83.0/"
 cd $VENDOR_DIR
 echo "Installing poppler data"
 
-tar -xvzf $VENDOR_DIR/poppler-data-0.4.9.tar.gz
+tar -xvzf "$VENDOR_DIR/poppler-data-0.4.9.tar.gz"
 cd $POPPLER_DATA_DIR
 make install
 
