@@ -2,7 +2,7 @@
 
 BUILD_DIR=$1
 
-PWD = $(pwd)
+PWD = $(cd $(dirname $0); pwd)
 VENDOR_DIR="$PWD/vendor"
 
 POPPLER_DATA_HOME="$VENDOR_DIR/poppler-data"
