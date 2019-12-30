@@ -12,26 +12,11 @@ POPPLER_DATA_DIR=$VENDOR_DIR/poppler-data-0.4.9
 POPPLER_HOME=$VENDOR_DIR/poppler
 POPPLER_DIR=$VENDOR_DIR/poppler-0.83.0/
 
-echo "-----> PWD START"
-pwd
-echo "-----> PWD END"
-
-echo "-----> DIR START"
-dir
-echo "-----> DIR END"
-
-echo "-----> ls START"
-ls -l
-echo "-----> ls END"
-
-echo "-----> START"
-
 cd $VENDOR_DIR
 echo "Installing poppler data"
 
 tar -xvzf ./poppler-data-0.4.9.tar.gz
 cd $POPPLER_DATA_DIR
-make
 make install
 
 cd $VENDOR_DIR
@@ -42,5 +27,10 @@ cd $POPPLER_DIR
 ./configure
 make
 make install
+
+PROFILE_PATH="$BUILD_DIR/.profile.d/poppler.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:$HOME/vendor/poppler/bin"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HOME/vendor/poppler/lib"' >> $PROFILE_PATH
 
 echo "-----> DONE"
