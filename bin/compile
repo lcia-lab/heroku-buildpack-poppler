@@ -1,9 +1,7 @@
 #!/bin/bash
 
 BUILD_DIR=$1
-
-PWD = $(cd $(dirname $0); pwd)
-VENDOR_DIR="$PWD/vendor"
+VENDOR_DIR="vendor"
 
 POPPLER_DATA_HOME="$VENDOR_DIR/poppler-data"
 POPPLER_DATA_DIR="$VENDOR_DIR/poppler-data-0.4.9"
